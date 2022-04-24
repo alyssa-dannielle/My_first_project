@@ -4,12 +4,21 @@
 
 import turtle
 
-print("Pie Tracker!")
-project = input("Enter your project name: ")
+def header(title, char):
+    length = len(title) + 4
+    print(char * length)
+    print(char, title, char)
+    print(char * length)
+
+header("Pie Tracker", "%")
+print()
+
+project = input("Give this project a name: ")
+pies = eval(input("How many pies do you need for " + project.title() + "? ")) * 8
 
 slice = []
-for i in range(8):
-    slice.append(input("Enter a task for that project: ")) # each task is a slice of pie
+for i in range(pies):
+    slice.append(input("Write one simple step for " + project + ": ")) # each task is a slice of pie
 print(slice)
 
 turtle.hideturtle()
@@ -23,5 +32,8 @@ for i in range(7):
     turtle.forward(100)
     turtle.left(180)
     turtle.forward(100)
-
 turtle.done()
+
+#>fill slice upon task completion
+#>congratulations you completed x pies! and/or x slices!
+#>congratulations you survived! if none completed
