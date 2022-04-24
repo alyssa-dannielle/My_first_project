@@ -1,2 +1,2 @@
-# My_first_project
-Watch me grow as a coder
+# Pie_Tracker
+Use pies to keep track of your projects and help stay focused
